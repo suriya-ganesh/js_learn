@@ -1,6 +1,6 @@
 ---
 emoji: 📕
-title: Javascript for Impatient programmers
+title: javascript for impatient programmers
 description: Learning notes form axel Rauschmayer's javascript for impatient programmers
 date: 2022-11-06
 layout: base
@@ -9,7 +9,7 @@ tags: ["tech", "programming"]
 
 These are my notes from following the excellent book, [javascript for impatient programmers](https://exploringjs.com/impatient-js/index.html) by axel Rauschmayer
 
-### Understanding let and var
+### understanding let and var
 
 The `let` keyword creates a new variable locally. it is **not attached to the global object**
 
@@ -71,7 +71,7 @@ stack, it has a local value present with it
 */
 ```
 
-### Redeclaration
+### redeclaration
 
 var lets you redeclare variables
 
@@ -89,7 +89,7 @@ This results in an error like,
 Uncaught SyntaxError: Identifier 'counter' has already been declared
 ```
 
-### Temporal Death Zone (TDZ)
+### temporal death zone (tdz)
 
 A variable declared by the `let` keyword has a so-called temporal dead zone (TDZ). The TDZ is the time from the start of the block until the variable declaration is processed.
 
@@ -131,7 +131,7 @@ It should be noted that if you access a variable declared by the `let` keyword i
 
 The temporal death zone is there to **prevent you from accidently referencing a variable before its declaration.**
 
-## Default params
+## default params
 
 ```js
 function say(message='Hi') {
@@ -142,7 +142,7 @@ say(); // 'Hi'
 say('Hello'); //'Hello'
 ```
 
-### Arguments vs Parameters
+### arguments vs parameters
 
 Parameters - what is specified in the function declaration
 
@@ -158,18 +158,18 @@ add(100, 200);
 //  ^^^  ^^^ Arguments
 ```
 
-### JS History
+### js history
 
 - Founded by Brendan Eich for netscape navigator.
 - *JavaScript*  => language and its implementations
 - *ECMAScript* => language standard and language versions
 
-## ECMA Technical Committee39 (TC39)
+## ecma technical committee39 (tc39)
 Meetings occur every 2 months, the meeting notes can be found in [this github repo](https://github.com/tc39/notes)
 
 New proposals are tracked through [this github repository for proposals](https://github.com/tc39/proposals)
 
-## JavaScript rest parameters
+## javascript rest parameters
 
 The rest parameter, shown as `(...)`. A __rest parameter allows you to represent an indefinite number of arguments as an array__.
 
@@ -192,7 +192,7 @@ function fn(a,...rest,b) {
 }
 ```
 
-## Using Spread operators
+## using spread operators
 
 Spread operators are used to combine arrays, maps or set.
 
@@ -207,7 +207,7 @@ console.log(combined1); // [2,1,3,5,4,6]
 
 the syntax is similar to [rest params](03_rest_params.md)
 
-## Using spread params:
+## using spread params:
 
 ```js
 var variables = ['a', 'b'];
@@ -240,7 +240,7 @@ console.log(chars); //["A", "B", "C", "D"]
 
 The goal of this  moodely is to make _object literals_ more succinct and powerful by extending the syntax in some ways.
 
-### Object property initializer shorthand
+### object property initializer shorthand
 
 ```js
  function createMachine(name, status) {
@@ -274,7 +274,7 @@ let machine = {
 };
 ```
 
-### Computed property name
+### computed property name
 
 Prior to ES6, you could use the square brackets (`[]`) to enable the computed property names for the properties on objects.
 
@@ -287,7 +287,7 @@ let machine = {
 }
 ```
 
-### Concise method syntax
+### concise method syntax
 
 while defining methods, name and full function definition was required. now it's not
 
@@ -306,9 +306,9 @@ let server = {
 }
 ```
 
-## Basic constructs
+## basic constructs
 
-### Comments:
+### comments:
 
 ```js
 // Single-line comment
@@ -319,7 +319,7 @@ comment wit multiple lines
 
 ```
 
-### Primitive values:
+### primitive values:
 
 Booleans:
 
@@ -352,7 +352,7 @@ Strings:
 
 JavaScript has no extra type for characters. It uses strings to represent characters
 
-### Assertions
+### assertions
 
 an *assertion* describes what the result of a computation is expected to look like and throws excaption when it fails
 
@@ -363,12 +363,12 @@ assert.equal(7+1,7);
 
 ```
 
-### Logging to the console
+### logging to the console
 
 Console logging can be used with both nodejs and browser.
 The console API has a lot of customisations possible that can be found [here](https://developer.mozilla.org/en-US/docs/Web/API/console)
 
-### Operators
+### operators
 
 ```js
 //Operators for booleans
@@ -398,7 +398,7 @@ assert.equal( 'abc' === 'abc', true); //AKA strict equal
 assert.equal( 'abc' !== 'def', true);
 ```
 
-### Declaring variables
+### declaring variables
 
 `const` =>
 - *immutable variable bindings
@@ -419,7 +419,7 @@ let create *mutable variable bindings
 let y = 35;
 ```
 
-### Ordinary function declaration
+### ordinary function declaration
 
 ```js
 //add1() has the parameters a and b
@@ -429,7 +429,7 @@ function add1(a,b) {
 //calling function add1()
 console.log(ad1(5,2))
 ```
-### Arrow function expressions
+### arrow function expressions
 
 These are usually used as arguments of function calls ad method calls
 
@@ -440,7 +440,7 @@ const add3 = (a,b) => a+b; //Also valid
 console.log(add2(1,2)); //works similar to a normal function
 ```
 
-### Plain objects
+### plain objects
 
 ```js
 const obj = {
@@ -455,7 +455,7 @@ console.log(obj.first) //Jane
 obj.first = 'Janey';
 console.log(obj.getfullname()) //Janey Doe
 ```
-### Arrays
+### arrays
 
 ```js
 //Array using an Array literal
@@ -466,7 +466,7 @@ arr[0] = '4' //Array can be edited even if it is a const
 arr.push('d') //appending an element to an array
 ```
 
-### Modules
+### modules
 Every module is a file.
 
 Each module is a single file. For example,
@@ -521,7 +521,7 @@ const olivier = new Officer('Olivier','CTO')
 console.log(olivier) //Person named Jane (CTO)
 ```
 
-### Exception handling
+### exception handling
 
 ```js
 
